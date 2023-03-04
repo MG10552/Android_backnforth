@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Caster_app1</string>
+    <string name="yourMessage">Your Message</string>
+    <string name="broadcast">Broadcast</string>
+</resources>

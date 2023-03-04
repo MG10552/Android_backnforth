@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Receiver_app2</string>
+    <string name="message_notification_title_template">Message: %1$s</string>
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+    <string name="listen">Listen</string>
+    <string name="deafen">Deafen</string>
+    <string name="listening">Started Listening</string>
+    <string name="ceasing">Ceased Listening</string>
+</resources>

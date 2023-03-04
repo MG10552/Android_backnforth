@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pjatk.s10552.receiver_app2">
+
+    <uses-permission android:name="pjatk.s10552.caster_app1.CATCH_MESSAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <permission android:name="pjatk.s10552.caster_app1.CATCH_MESSAGE"  android:protectionLevel="normal" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="pjatk.s10552.receiver_app2.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.permission.RECIVE_BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="pjatk.s10552.receiver_app2.MessageReceiver" android:enabled="true" android:exported="true" android:permission="pjatk.s10552.caster_app1.CATCH_MESSAGE">
+            <intent-filter >
+                <action android:name="pjatk.s10552.caster_app1.CATCH_MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="pjatk.s10552.receiver_app2.MService" android:enabled="true" android:exported="true"/>
+    </application>
+
+</manifest>
